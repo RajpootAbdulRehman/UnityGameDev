@@ -254,3 +254,221 @@
         transition: none;
     }
 }
+
+
+/* FIX: Battlefield Strike FPS card */
+.project-image.fps-art {
+    position: relative;
+    min-height: 230px;
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+    background:
+        radial-gradient(ellipse at 50% 65%, rgba(255, 65, 35, .48), transparent 42%),
+        linear-gradient(145deg, #343b4d 0%, #171a29 48%, #08090f 100%) !important;
+}
+
+.project-image.fps-art::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .65;
+    background-image:
+        linear-gradient(rgba(255,255,255,.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.09) 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+.project-image.fps-art .fps-crosshair {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(255, 90, 65, .8);
+    border-radius: 50%;
+    color: #ff634e;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 35px rgba(255, 60, 30, .35);
+}
+
+.project-image.fps-art .fps-hud {
+    position: absolute;
+    inset: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #ffb6a7;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    z-index: 2;
+}
+
+.project-image.fps-art .fps-title {
+    position: relative;
+    z-index: 3;
+    margin-top: 70px;
+    padding: 8px 14px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.05;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2px;
+    background: rgba(8, 9, 15, .75);
+    border-left: 3px solid #ff634e;
+    text-shadow: 0 2px 12px #000;
+}
+
+.project-image.fps-art .image-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    z-index: 4;
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* FIX: Run Rush Adventure card */
+.project-image.run-art {
+    position: relative;
+    min-height: 230px;
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+    background:
+        radial-gradient(ellipse at 50% 75%, rgba(255, 218, 105, .5), transparent 40%),
+        linear-gradient(180deg, #111c4c 0%, #493a8a 55%, #ef8b87 100%) !important;
+}
+
+.project-image.run-art::before {
+    content: "✦       ·          ✦";
+    position: absolute;
+    inset: 20px 12px auto;
+    color: #fff0bb;
+    font-size: 25px;
+    letter-spacing: 22px;
+    z-index: 0;
+}
+
+.project-image.run-art .run-track {
+    position: absolute;
+    width: 150%;
+    height: 85px;
+    bottom: -24px;
+    left: -25%;
+    z-index: 1;
+    transform: perspective(100px) rotateX(15deg);
+    background: repeating-linear-gradient(
+        90deg,
+        #28245a 0 38px,
+        #63519c 38px 43px
+    );
+    border-top: 3px solid #ffe28b;
+    box-shadow: 0 -12px 30px rgba(20, 12, 55, .3);
+}
+
+.project-image.run-art .run-track span {
+    position: absolute;
+    top: 10px;
+    color: #ffe28b;
+    font-size: 22px;
+}
+
+.project-image.run-art .run-track span:nth-child(1) {
+    left: 25%;
+}
+
+.project-image.run-art .run-track span:nth-child(2) {
+    left: 52%;
+}
+
+.project-image.run-art .run-track span:nth-child(3) {
+    left: 78%;
+}
+
+.project-image.run-art .run-character {
+    position: relative;
+    z-index: 3;
+    width: 48px;
+    height: 65px;
+    margin-top: 20px;
+    border: 3px solid #fff;
+    border-radius: 20px 20px 12px 12px;
+    background: linear-gradient(135deg, #fff08c, #ff8e43);
+    color: #39275d;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-8deg);
+    box-shadow: 0 0 28px rgba(255, 218, 105, .5);
+}
+
+.project-image.run-art .run-character::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: -27px;
+    left: 5px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background: #ffcf7b;
+}
+
+.project-image.run-art .run-title {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    color: #fff;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 3px;
+    text-shadow: 0 3px 12px #17102e;
+}
+
+.project-image.run-art .image-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 5;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .project-image.fps-art,
+    .project-image.run-art {
+        min-height: 200px;
+        height: 200px;
+    }
+
+    .project-image.fps-art .fps-title,
+    .project-image.run-art .run-title {
+        font-size: 21px;
+    }
+}
+
