@@ -2,3 +2,213 @@
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:15px;padding-top:75px}.hero-copy{max-width:700px}.hero-art{max-width:550px;width:100%;margin:0 auto}.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-section{gap:40px}.section-heading{align-items:start;flex-direction:column;gap:14px}.section-heading>p{max-width:600px}.project-content p{min-height:unset}}
 @media(max-width:620px){.container{width:min(var(--max),calc(100% - 32px))}.nav{height:66px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;left:16px;right:16px;top:60px;padding:18px;background:#171522;border:1px solid var(--line);border-radius:12px;flex-direction:column;align-items:stretch;gap:16px}.nav-links.open{display:flex}.nav-contact{text-align:center}.hero{padding-top:56px;padding-bottom:45px;min-height:unset}.hero h1{font-size:45px;letter-spacing:-2.5px}.hero-description{font-size:13px}.hero-art{height:340px}.game-window{width:90%}.scene{height:220px}.orbit-one{width:340px;height:210px}.orbit-two{width:300px;height:270px}.tag-unity{left:0;top:25px}.tag-code{right:0;bottom:25px}.floating-tag{padding:8px 10px}.floating-tag b{font-size:10px}.floating-tag small{font-size:8px}.section{padding-top:70px;padding-bottom:70px}.project-grid{grid-template-columns:1fr}.project-image{height:220px}.skills-section{padding:70px 0}.skills-grid{grid-template-columns:1fr 1fr;gap:10px}.skill-card{padding:17px 14px}.skill-card p{min-height:115px;font-size:10px}.about-section{grid-template-columns:1fr;gap:30px}.about-visual{height:280px}.about-orb{width:140px;height:140px;font-size:70px}.contact-section{padding:65px 0}.contact-inner{grid-template-columns:1fr;gap:25px}.contact-card{padding:20px}.footer-inner{flex-wrap:wrap}.footer p{order:3;width:100%;margin:0}.section-heading h2,.about-copy h2{font-size:35px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}*,*:before,*:after{transition:none!important}}
+
+/* ===== Battlefield Strike FPS Artwork ===== */
+.fps-art,
+.project-image.fps-art {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 35%, #4b82a8 0%, #1b3049 42%, #10131f 80%);
+}
+
+.fps-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .45;
+  background:
+    linear-gradient(115deg, transparent 35%, #b6d8ff18 36%, transparent 37%),
+    linear-gradient(25deg, transparent 45%, #ffffff12 46%, transparent 47%);
+}
+
+.fps-crosshair {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 90px;
+  height: 90px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #b8e3ff;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #55baff66, inset 0 0 22px #55baff22;
+}
+
+.fps-crosshair::before,
+.fps-crosshair::after {
+  content: "";
+  position: absolute;
+  background: #d7efff;
+  box-shadow: 0 0 10px #65bdff;
+}
+
+.fps-crosshair::before {
+  width: 2px;
+  height: 125px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fps-crosshair::after {
+  height: 2px;
+  width: 125px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fps-hud {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  padding: 7px 10px;
+  border: 1px solid #8dcfff55;
+  border-radius: 5px;
+  background: #071321bb;
+  color: #bce7ff;
+  font: 800 9px/1.5 monospace;
+  letter-spacing: 1.4px;
+}
+
+.fps-title {
+  position: absolute;
+  right: 18px;
+  bottom: 17px;
+  color: #eaf6ff;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 1.5px;
+  text-align: right;
+  text-shadow: 0 3px 15px #000;
+}
+
+.fps-title span {
+  display: block;
+  color: #7dd3fc;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-top: 5px;
+}
+
+/* ===== Run Rush Adventure Artwork ===== */
+.run-art,
+.project-image.run-art {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 20%, #4356a1 0%, #24234b 50%, #131322 85%);
+}
+
+.run-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, #8bb8ff22, transparent 65%);
+}
+
+.run-track {
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  width: 180px;
+  height: 250px;
+  transform: translateX(-50%) perspective(180px) rotateX(24deg);
+  background: linear-gradient(90deg, #292b46, #414566 50%, #292b46);
+  border-left: 3px solid #a5b4fc;
+  border-right: 3px solid #a5b4fc;
+  box-shadow: 0 0 35px #0008;
+}
+
+.run-track::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 4px dashed #fef08a;
+  transform: translateX(-50%);
+}
+
+.run-character {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 36%;
+  width: 43px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  border-radius: 18px 18px 12px 12px;
+  background: linear-gradient(145deg, #fef08a, #f97316);
+  border: 2px solid #ffedd5;
+  box-shadow: 0 10px 25px #0007, 0 0 22px #fb923c55;
+}
+
+.run-character::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: -25px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ffd8b4;
+  border: 2px solid #fff0d9;
+}
+
+.run-character::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  bottom: 3px;
+  width: 18px;
+  height: 30px;
+  border-radius: 10px;
+  background: #fbbf24;
+  transform: rotate(28deg);
+  box-shadow: 48px -4px 0 -1px #fbbf24;
+}
+
+.run-title {
+  position: absolute;
+  right: 17px;
+  bottom: 16px;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-align: right;
+  text-shadow: 0 3px 15px #000b;
+}
+
+.run-title span {
+  display: block;
+  color: #fde68a;
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 7px;
+}
+
+/* Artwork responsive adjustments */
+@media (max-width: 620px) {
+  .fps-crosshair {
+    width: 70px;
+    height: 70px;
+  }
+
+  .fps-crosshair::before {
+    height: 95px;
+  }
+
+  .fps-crosshair::after {
+    width: 95px;
+  }
+
+  .fps-title {
+    font-size: 17px;
+  }
+
+  .run-track {
+    width: 
